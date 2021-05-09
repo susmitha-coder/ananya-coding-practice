@@ -1,6 +1,6 @@
-package in.susmitha.simple_interpreter_part_two.service;
-import in.susmitha.simple_interpreter_part_two.model.Token;
-import in.susmitha.simple_interpreter_part_two.model.TokenType;
+package in.susmitha.simple_interpreter_part_two.service.service;
+import in.susmitha.simple_interpreter_part_two.service.model.Token;
+import in.susmitha.simple_interpreter_part_two.service.model.TokenType;
 
 public class LexicalAnalyzerV2 {
 

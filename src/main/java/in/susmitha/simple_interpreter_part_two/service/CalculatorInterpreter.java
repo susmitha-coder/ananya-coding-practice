@@ -1,5 +1,6 @@
-package in.susmitha.simple_interpreter_part_two;
-import in.susmitha.simple_interpreter_part_two.service.Expr;
+package in.susmitha.simple_interpreter_part_two.service;
+import in.susmitha.simple_interpreter_part_two.service.service.Expr;
+
 import java.util.Scanner;
 
 public class CalculatorInterpreter {

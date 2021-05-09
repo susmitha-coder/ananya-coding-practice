@@ -1,9 +1,8 @@
 
-package in.susmitha.simple_interpreter_part_two.service;
+package in.susmitha.simple_interpreter_part_two.service.service;
 
-        import in.susmitha.simple_interpreter_part_two.model.Token;
-        import in.susmitha.simple_interpreter_part_two.model.TokenType;
-        import in.susmitha.simple_interpreter_part_two.service.LexicalAnalyzerV2;
+        import in.susmitha.simple_interpreter_part_two.service.model.Token;
+        import in.susmitha.simple_interpreter_part_two.service.model.TokenType;
 
         import java.util.*;
 
@@ -53,6 +52,10 @@ public class Expr {
 
     public int evaluate(String input) {
         Token[] tokens = new Token[3];
+        if(input == null){
+            throw new IllegalArgumentException("null value not allowed");
+        }
+
         /*
         structure of the language ->
         integer+integer and the integer are single digit
@@ -63,9 +66,16 @@ public class Expr {
             tokens[i] = analyzer.getNextToken(); // tokens[0] -> left // tokens[1] -> middle //tokens[2] -> right
             //System.out.println("Hey");
             if (!validate(tokens[i], this.structure.get(i))) { //this.structure.get(0) -> o/p -> TokenType.INTEGER
-                throw new IllegalArgumentException("The input is invalid : Valid is : <int>+<int> where <int> should be single digit");
+                throw new IllegalArgumentException( "The input is invalid : Valid is : <int>operator<int> where <int> cab be any digit " +
+                        "and allowed operators are [+,-,*,/]");
             }
+
         }
+
+//        if(tokens[1].getValue().equals("/") && tokens[2].getValue().equals("0")){
+//            throw new IllegalArgumentException("The input is invalid : Valid is : <int>/<int> where second <int> should be a value greater than zero");
+
+//        }
         //Integer.parseInt("10") -> int 10
         //  return (Integer.parseInt(tokens[0].getValue())*10+Integer.parseInt(tokens[1].getValue()) + Integer.parseInt(tokens[3].getValue())*10+Integer.parseInt(tokens[4].getValue()));
         /*if(input.indexOf('+')>0)
@@ -80,6 +90,10 @@ public class Expr {
             case MULTIPLICATION:
                 return (Integer.parseInt(tokens[0].getValue()) * Integer.parseInt(tokens[2].getValue()));
             case DIVISION:
+                if(tokens[2].getValue().equals("0")){
+                    throw new IllegalArgumentException("The input is invalid : Valid is : <int>/<int> where second <int> should be a value greater than zero");
+
+                }
                 return (Integer.parseInt(tokens[0].getValue()) / Integer.parseInt(tokens[2].getValue()));
 
 
