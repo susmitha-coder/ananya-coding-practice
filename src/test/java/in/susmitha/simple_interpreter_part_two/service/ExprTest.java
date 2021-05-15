@@ -56,6 +56,7 @@ public class ExprTest {
 
 
 
+
     }
 
     @Test
@@ -76,6 +77,15 @@ public class ExprTest {
 
     }
 
+
+    @Test
+    public void testCasePassingEmptyStringAsInput() {
+        Expr expr = new Expr();
+        Throwable exception = Assertions.assertThrows(IllegalArgumentException.class,
+                () -> expr.evaluate(""));
+        Assertions.assertEquals("Empty String not allowed", exception.getMessage());
+
+    }
 
 
 }

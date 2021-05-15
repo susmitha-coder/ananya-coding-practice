@@ -52,6 +52,9 @@ public class Expr {
 
     public int evaluate(String input) {
         Token[] tokens = new Token[3];
+        if(input.length()==0) {
+            throw new IllegalArgumentException("Empty String not allowed");
+        }
         if(input == null){
             throw new IllegalArgumentException("null value not allowed");
         }
@@ -69,6 +72,7 @@ public class Expr {
                 throw new IllegalArgumentException( "The input is invalid : Valid is : <int>operator<int> where <int> cab be any digit " +
                         "and allowed operators are [+,-,*,/]");
             }
+
 
         }
 
