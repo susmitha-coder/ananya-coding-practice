@@ -9,8 +9,8 @@ public class MaximumPopulation {
         int m = scanner.nextInt();
         int n = scanner.nextInt();
         int[][] matrix = new int[m][n];
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
+        for(int i=0;i<m;i++){
+            for(int j=0;j<n;j++){
                 matrix[i][j] = scanner.nextInt();
             }
         }
@@ -18,24 +18,29 @@ public class MaximumPopulation {
     }
 
     public int maximumPopulation(int[][] logs) {
-        int years[] = new int[101];
-        int i, max, earliest = 0;
-        for (i = 0; i < 101; i++)
-            years[i] = 0;
-        for (i = 0; i < logs.length; i++) {
-            years[(logs[i][0] - 1950)] += 1;
-            years[(logs[i][1] - 1950)] -= 1;
+        if(logs[0].length==0)
+            throw new IllegalArgumentException("Empty Matrix not allowed");
+
+        if(logs == null || logs.length == 0) return 0;
+
+        int[] populations = new int[101];
+        for(int[] log: logs) {
+            int startYearIndex = log[0]-1950;
+            int endYearIndex = log[1]-1950;
+
+            while(startYearIndex < endYearIndex)
+                populations[startYearIndex++]++;
         }
-        for (i = 1; i < 101; i++) {
-            years[i] = years[i] + years[i - 1];
-        }
-        max = years[0];
-        for (i = 1; i < 100; i++) {
-            if (years[i] > max) {
-                max = years[i];
-                earliest = i;
+
+        int maxIndex = 0;
+        int max = Integer.MIN_VALUE;
+        for(int i = 0; i < populations.length; ++i) {
+            if(populations[i] > max) {
+                max = populations[i];
+                maxIndex = i;
             }
         }
-        return 1950 + earliest;
+
+        return maxIndex+1950;
     }
 }
