@@ -2,9 +2,9 @@ package in.susmitha.leetcode.easy.linkedlist_arrays;
 
 import java.util.Scanner;
 
-public class MaximumPopulation  {
+public class MaximumPopulation {
     public static void main(String[] args) {
-        MaximumPopulation  obj = new MaximumPopulation  ();
+        MaximumPopulation obj = new MaximumPopulation();
         Scanner scanner = new Scanner(System.in);
         int m = scanner.nextInt();
         int n = scanner.nextInt();

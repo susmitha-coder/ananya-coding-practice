@@ -1,32 +1,41 @@
 package in.susmitha.leetcode.easy.linkedlist_arrays;
 import java.util.Scanner;
+
 public class DiagonalSum {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         DiagonalSum obj = new DiagonalSum();
-        Scanner s = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter number of rows");
-        int m = s.nextInt();
+        int m = scanner.nextInt();
         System.out.println("Enter number of columns");
-        int n = s.nextInt();
+        int n = scanner.nextInt();
         System.out.println("Enter elements of the matrix");
         int[][] matrix = new int[m][n];
         for(int i=0;i<m;i++){
             for(int j=0;j<n;j++){
-                matrix[i][j] = s.nextInt();
+                matrix[i][j] = scanner.nextInt();
             }
         }
         System.out.println(obj.diagonalSum(matrix));
     }
     public int diagonalSum(int[][] mat) {
-        int diag = 0;
-        for(int i=0; i<mat.length; i++) {
-            diag+=mat[i][i]+mat[i][mat.length-1-i];
+        if(mat[0].length==0) {
+            throw new IllegalArgumentException("Empty Matrix not allowed");
         }
-        if(mat.length%2==1){
-            diag=diag-mat[mat.length/2][mat.length/2];
-            return diag;
+        if(mat==null)
+        {
+            throw new IllegalArgumentException("Null value not allowed");
         }
-        return diag;
-    }
 
+        int sum=0;
+        int len = mat.length-1;
+        for(int i=0;i<mat[0].length;i++){
+            sum+=mat[i][i];
+            if(i!=len-i)
+                sum+=mat[i][len-i];
+
+        }
+        return sum;
+
+    }
 }

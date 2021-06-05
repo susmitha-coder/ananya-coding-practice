@@ -2,7 +2,7 @@ package in.susmitha.leetcode.easy.linkedlist_arrays;
 import java.util.Scanner;
 import java.util.Arrays;
 public class HeightChecker {
-    public static void main(String[] args){
+    public static void main( String[] args ) {
         HeightChecker obj = new HeightChecker();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter size of the array");
