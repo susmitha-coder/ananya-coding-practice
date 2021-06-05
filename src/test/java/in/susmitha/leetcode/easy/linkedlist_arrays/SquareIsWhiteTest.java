@@ -27,5 +27,3 @@ class SquareIsWhiteTest {
         Assertions.assertEquals("Length of the string should be 2", exception.getMessage());
     }
 }
-
-
