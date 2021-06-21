@@ -17,5 +17,15 @@ public class LinkedListApplication {
         list.print();
         list.insertAtBeginning(11);
         list.print();
+        list.insertAtGivenPosition(12,2);
+        list.print();
+        list.deleteAtGivenPosition(9);
+        list.print();
+        System.out.println(list.getSize());
+        System.out.println(list.check(9));
+        System.out.println(list.check(23));
+        list.reverse();
+        list.print();
     }
+
 }
