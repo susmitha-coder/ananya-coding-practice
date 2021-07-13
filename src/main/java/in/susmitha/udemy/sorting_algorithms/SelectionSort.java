@@ -6,7 +6,7 @@ public class SelectionSort {
         int[] arr = {10,35,29,42,12,89,45};
         selection.selectionSort(arr);
     }
-    public void selectionSort(int[] arr){
+    public int[] selectionSort(int[] arr){
 
         for(int i= arr.length-1;i>0;i--) {
             int large = 0;
@@ -23,5 +23,6 @@ public class SelectionSort {
         for (int i=0;i<arr.length;i++){
             System.out.println(arr[i]);
         }
+        return arr;
     }
 }
