@@ -6,7 +6,7 @@ public class InsertionSort {
             int[] arr = {10,35,29,42,12,89,45};
             insert.insertionSort(arr);
         }
-        public void insertionSort(int[] arr){
+        public int[] insertionSort(int[] arr){
 
             for(int i=1;i< arr.length;i++){
                 int n = arr[i];
@@ -20,6 +20,7 @@ public class InsertionSort {
             for (int i=0;i<arr.length;i++){
                 System.out.println(arr[i]);
             }
+            return arr;
         }
 
     }
