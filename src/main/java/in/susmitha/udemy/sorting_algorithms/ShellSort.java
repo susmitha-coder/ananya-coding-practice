@@ -7,7 +7,7 @@ public class ShellSort {
         s.shellSort(arr);
     }
 
-    public void shellSort(int[] arr){
+    public int[] shellSort(int[] arr){
 
         for(int gap=arr.length/2;gap>0;gap/=2) {
             for(int i=gap;i<arr.length;i++) {
@@ -23,5 +23,6 @@ public class ShellSort {
         for(int i=0;i<arr.length;i++){
             System.out.println(arr[i]);
         }
+        return arr;
     }
 }
