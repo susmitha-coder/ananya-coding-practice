@@ -1,4 +1,4 @@
-package in.susmitha.udemy.Circular_queue_part_one;
+package in.susmitha.udemy.circular_queue_part_one;
 import java.util.NoSuchElementException;
 
 public class ArrayQueue {

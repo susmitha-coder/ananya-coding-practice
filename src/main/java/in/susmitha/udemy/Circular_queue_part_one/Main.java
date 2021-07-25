@@ -1,5 +1,4 @@
-package in.susmitha.udemy.Circular_queue_part_one;
-
+package in.susmitha.udemy.circular_queue_part_one;
 public class Main {
     public static void main(String[] args) {
 
