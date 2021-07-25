@@ -1,4 +1,4 @@
-package in.susmitha.udemy.Single_linked_list;
+package in.susmitha.udemy.single_linked_list;
 
 public class EmployeeNode {
     private Employee employee;
