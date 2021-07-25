@@ -1,5 +1,4 @@
-package in.susmitha.udemy.Circular_queue_part_two;
-
+package in.susmitha.udemy.circular_queue_part_two;
 
 public class Employee {
     private String firstName;
