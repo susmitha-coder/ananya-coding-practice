@@ -1,4 +1,4 @@
-package in.susmitha.udemy.Double_linked_list;
+package in.susmitha.udemy.double_linked_list;
 
 public class Employee {
     private String firstName;
@@ -64,3 +64,5 @@ public class Employee {
                 '}';
     }
 }
+
+

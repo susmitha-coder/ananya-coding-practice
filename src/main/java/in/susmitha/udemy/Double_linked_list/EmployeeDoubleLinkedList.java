@@ -1,4 +1,5 @@
-package in.susmitha.udemy.Double_linked_list;
+package in.susmitha.udemy.double_linked_list;
+
 public class EmployeeDoubleLinkedList {
     private EmployeeNode head;
     private EmployeeNode tail;
@@ -121,4 +122,6 @@ public class EmployeeDoubleLinkedList {
         System.out.println("null");
     }
 }
+
+
 

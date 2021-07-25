@@ -1,4 +1,4 @@
-package in.susmitha.udemy.Double_linked_list;
+package in.susmitha.udemy.double_linked_list;
 
 public class Main {
     public static void main(String[] args) {
@@ -32,4 +32,7 @@ public class Main {
 
     }
 }
+
+
+
 
