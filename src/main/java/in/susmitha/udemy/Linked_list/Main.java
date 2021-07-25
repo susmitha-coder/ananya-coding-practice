@@ -1,19 +1,19 @@
-package in.susmitha.udemy.Linked_list;
+package in.susmitha.udemy.linked_list;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-    public class Main {
-        public static void main(String[] args) {
-            List<Employee> employeeList = new ArrayList<>();
-            employeeList.add(new Employee("susmi", "nukala", 539));
-            employeeList.add(new Employee("ram", "ava", 123));
-            employeeList.add(new Employee("shyam", "rivera", 456));
-            employeeList.add(new Employee("sita", "patel", 789));
+public class Main {
+    public static void main(String[] args) {
+        List<Employee> employeeList = new ArrayList<>();
+        employeeList.add(new Employee("susmi", "nukala", 539));
+        employeeList.add(new Employee("ram", "ava", 123));
+        employeeList.add(new Employee("shyam", "rivera", 456));
+        employeeList.add(new Employee("sita", "patel", 789));
 
 
-            //        System.out.println(employeeList.get(1));
+        //        System.out.println(employeeList.get(1));
 //
 //        System.out.println(employeeList.isEmpty());
 
@@ -35,5 +35,7 @@ import java.util.List;
 
 //        employeeList.remove(2);
 //        employeeList.forEach(employee -> System.out.println(employee));
-        }
     }
+}
+
+
